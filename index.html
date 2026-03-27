@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Happy bday zyra emanuelle amata 🎂</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="heart-container" id="heartContainer"></div>
+
+    <audio id="bgMusic" loop>
+        <source src="musc.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="cake-wrap" onclick="blowCandle()">
+        <div class="candle">
+            <div class="flame" id="flame"></div>
+        </div>
+        <div class="cake-top"></div>
+        <div class="cake-bottom"></div>
+        <p class="wish-text" id="wishText">mag blow ka at mag wish</p>
+    </div>
+
+    <div class="bday">
+        <img src="bday.png" alt="Birthday Banner" class="pulse">
+    </div>
+
+    <h1 class="title">messages 4 u ♡</h1>
+    <p class="subtitle">tap a name!</p>
+
+    <div class="links">
+        <a href="#Rina">Rina</a>
+        <a href="#Amira">Amira</a>
+        <a href="#Kyle">Kyle</a>
+        <a href="#Drew">Drew</a>
+        <a href="#Reaven">Reaven</a>
+        <a href="#Dann">Dann</a>
+    </div>
+
+    <section id="Rina" class="letter">
+        <img src="zy1.png" class="sticker s1">
+        <h4>happiest birthday, zy!</h4>
+        <p> u truly made shs special 💗💗 I dont know how i'd survive cdo without you, i would've never thought nga ang pinaka tabian sa room would become someone that i’d hold so close to my heart. You have been there for me through every situation good or bad; know that I’ll always be with you pud! even though maldita kag kilay and mura kag manumbag, u continue to make it ironic by being the kindest, sweetest and most 
+            importantly, the funniest person i know, thank u for being the light in everyone’s lives! We are so lucky to have you, love u zy 💖</p>
+        <a href="#" class="close-btn">close</a>
+    </section>
+
+    <section id="Amira" class="letter">
+        <img src="zy2.png" class="sticker s2">
+        <h4>To the other half of my height, happy birthday!</h4>
+        <p>I’d like to start by expressing how grateful I am to have met such a chaotic yet caring friend. You’re one of the people who has helped me get through so much during shs. Thank you for never treating me like a stranger, for checking up on me, and for always hangating me—it really means so much to me.
+        Zyra, I’m already mingaw to you. You’re always in my thoughts and prayers. e savor nani akong message kay di ko ingani permi HAHAHAHA. I miss you so much, Zyra. I hope you’re enjoying your college life. I hope you’re happy and healthy. This message may be short, but it is genuine, and I mean everything.
+        I love you, Zy!</p>
+        <a href="#" class="close-btn">close</a>
+    </section>
+
+    <section id="Kyle" class="letter">
+        <img src="zy3.png" class="sticker s3">
+        <h4>happy bidet, zyraaa</h4>
+        <p>ikaw talaga ang aming own version sa small but terrible. abasss. thank you for being one of my closest friend even though ayha rata nag 🤞 adtong shs. na para bang we match our freakss. ikaw talaga ang sunshine ng bohai q dahil napapatawa mo ako sa iyong walang prenong bibig, labon na pag mag banter mo ni r**v*n. 
+        i hope this year of ur lyf will give you more reasons to smile and give joy to all people surrounding you. may all your efforts be worth it and dreams come true kay deserve jud nimo ang all. hmwa hmwa😘.
+        see u soonest, sergeant! 💋 </p>
+        <a href="#" class="close-btn">close</a>
+    </section>
+
+    <section id="Drew" class="letter">
+        <img src="zy4.png" class="sticker s4">
+        <h4>happy birthday, zy!!</h4>
+        <p> i am whole heartedly so grateful nga nag friend ta through rina. now, dli na nako ma imagine if we never met and never became friends. i miss you every minute of everyday 🙁😩🥺 HAPPY BDAY I LOVE U
+        mag mature nata ha ug di na mag minaldita bes</p>
+        <a href="#" class="close-btn">close</a>
+    </section>
+
+    <section id="Reaven" class="letter">
+        <img src="zy5.png" class="sticker s5 big">
+        <h4>Happy 20th birthday Zy</h4>
+        <p> WAHAHAHAHAHAHAHAHAHAHAH yawa tiguang. Anyways i wish you have a great day on youre very special day and I wish for you to enjoy your year, I’m glad to have a friend like you ever since senior high, maka proud na ni abot paka ani nga panahon. You were always the person I’d share my closest secrets to, and unreplacable ka nga friend. Keep pushing 20s Zy, happy birthday!</p>
+        <a href="#" class="close-btn">close</a>
+    </section>
+
+    <section id="Dann" class="letter">
+        <img src="zy6.png" class="sticker s6">
+        <h4>Happy birthday my number one Zyra </h4>
+        <p>I’m so thankful sa imo kay ikaw ang way nga nagkahiusa ang tanan. Without you, wala siguro koy solid circle. Everything changed with one forceful invite. Kung wala siguro ko nimo gipugos ato nga adlaw nga mouban, dili siguro ta mahimong close ingani. Together with Rina, Reaven, Kyle, Drew, and Amira I'm really grateful nga naa ka.</p>
+        <a href="#" class="close-btn">close</a>
+    </section>
+
+    <footer>
+        from sulasok family 
+    </footer>
+
+    <script>
+        const music = document.getElementById('bgMusic');
+        music.volume = 0.3;
+
+       
+        document.addEventListener('click', function() {
+            music.play().catch(e => console.log("Music play blocked."));
+        }, { once: true });
+
+
+        function blowCandle() {
+            const flame = document.getElementById('flame');
+            const wishText = document.getElementById('wishText');
+            flame.style.opacity = '0';
+            wishText.innerHTML = "yay we love u zy";
+
+            for(let i=0; i<15; i++) { setTimeout(createHeart, i * 150); }
+        }
+
+
+        const container = document.getElementById('heartContainer');
+        const heartIcons = ['🌸', '✨', '💖', '☁️', '🤍'];
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+            heart.style.fontSize = Math.random() * 10 + 15 + "px";
+            container.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
